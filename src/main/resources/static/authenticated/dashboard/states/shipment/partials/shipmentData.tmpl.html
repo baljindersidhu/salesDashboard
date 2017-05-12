@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<md-card flex ng-controller="ShipmentDataController as vm">
+	<md-card-logo logo-path="vm._logoPath"
+				logo-color="vm._logoColor"
+				mode="{{vm._logoMode}}">
+	</md-card-logo> <!-- Hercules Component for artistic Header Logos -->
+	<md-card-title>
+		<md-card-title-text>
+			<span class="md-title">State</span>
+	        <md-select ng-model="vm.state" class="md-no-underline" placeholder="Select State">
+				    <md-option ng-value="opt.code" ng-repeat="opt in vm.states">{{ opt.name }}</md-option>
+			</md-select>
+		</md-card-title-text>
+	</md-card-title> <!-- Title ends here -->
+	<!-- Shipments Table Main View -->
+	<!-- <md-card-content>
+ 		<ng-include src="vm.tableProvider"></ng-include>
+	</md-card-content> -->
+</md-card> <!-- Parent card ends here -->

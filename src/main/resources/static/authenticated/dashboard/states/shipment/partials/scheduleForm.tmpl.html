@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<md-card flex>
+	<!-- Schedule Form View -->
+	<md-card-content>
+		<md-content layout-padding>
+    		<form name="vm.schedulerForm">
+    			<div layout="row" layout-align="center">
+    				<md-input-container>
+			        	<label>Shipment Date</label>
+			        	<md-datepicker 	ng-model="vm.shipment.shippedOn"
+			        			name="shippedOn"
+			        			required
+			          			md-min-date="vm.minDate"> <!-- md-placeholder="Shipment date" -->
+			        	</md-datepicker>
+			        	<div ng-messages="vm.schedulerForm.shippedOn.$error">
+			          		<div ng-message="valid">The entered value in Shipment Date is not a date!</div>
+			          		<div ng-message="required">Shipment date is required!</div>
+			          		<div ng-message="mindate">Date is too early!</div>
+			          		<div ng-message="maxdate">Date is too late!</div>
+			        	</div>
+ 			        </md-input-container>
+ 					
+ 					<md-input-container>
+			        	<label>Shipment Date</label>
+			        	<md-datepicker 	ng-model="vm.shipment.deliveredOn"
+			        			name="deliveredOn"
+			        			required
+			          			md-min-date="vm.minDate"> <!-- md-placeholder="Shipment date" -->
+			        	</md-datepicker>
+			        	<div ng-messages="vm.schedulerForm.deliveredOn.$error">
+			          		<div ng-message="valid">The entered value in Shipment Date is not a date!</div>
+			          		<div ng-message="required">Shipment date is required!</div>
+			          		<div ng-message="mindate">Date is too early!</div>
+			          		<div ng-message="maxdate">Date is too late!</div>
+			        	</div>
+ 			        </md-input-container>
+				</div>
+ 				<div layout="row">
+	    			<div layout="column" flex="50">
+	 					<md-input-container>
+	          				<label>Shipment Name</label>
+	          				<input required name="shipmentName" ng-model="vm.shipment.name">
+	          				<div ng-messages="vm.schedulerForm.shipmentName.$error">
+	            				<div ng-message="required">This is required.</div>
+	          				</div>
+	        			</md-input-container>
+	        			<md-input-container>
+	          				<label>Shipment Description</label>
+	          				<input required name="shipmentDescription" ng-model="vm.shipment.description">
+	          				<div ng-messages="vm.schedulerForm.shipmentDescription.$error">
+	            				<div ng-message="required">This is required.</div>
+	          				</div>
+	        			</md-input-container>
+ 					</div>
+ 					<div layout="column" flex="50">
+						<md-autocomplete flex required
+				            md-input-name="shipmentFrom"
+				            md-input-minlength="2"
+				            md-input-maxlength="18"
+				            md-no-cache="vm.noCache"
+				            md-selected-item="vm.shipment.shippedFrom"
+				            md-search-text="vm.searchShipmentFrom"
+				            md-items="item in vm.querySearch(vm.searchShipmentFrom)"
+				            md-item-text="item.name"
+				            md-require-match
+				            md-floating-label="Shipment From">
+				          		<md-item-template>
+				            		<span md-highlight-text="vm.searchText">{{item.name}}</span>
+				          		</md-item-template>
+				          		<div ng-messages="vm.schedulerForm.shipmentFrom.$error" ng-if="vm.schedulerForm.shipmentFrom.$touched">
+				            		<div ng-message="required">You <b>must</b> have a shipment state.</div>
+				            		<div ng-message="md-require-match">Please select an existing state.</div>
+				            		<div ng-message="minlength">Your entry is not long enough.</div>
+				            		<div ng-message="maxlength">Your entry is too long.</div>
+				          		</div>
+				        </md-autocomplete>
+				        <md-autocomplete flex required
+				            md-input-name="shipmentTo"
+				            md-input-minlength="2"
+				            md-input-maxlength="18"
+				            md-no-cache="vm.noCache"
+				            md-selected-item="vm.shipment.shippedTo"
+				            md-search-text="vm.searchShipmentTo"
+				            md-items="item in vm.querySearch(vm.searchShipmentTo)"
+				            md-item-text="item.name"
+				            md-require-match
+				            md-floating-label="Shipment To">
+				          		<md-item-template>
+				            		<span md-highlight-text="vm.searchText">{{item.name}}</span>
+				          		</md-item-template>
+				          		<div ng-messages="vm.schedulerForm.shipmentTo.$error" ng-if="vm.schedulerForm.shipmentTo.$touched">
+				            		<div ng-message="required">You <b>must</b> have a shipment state.</div>
+				            		<div ng-message="md-require-match">Please select an existing state.</div>
+				            		<div ng-message="minlength">Your entry is not long enough.</div>
+				            		<div ng-message="maxlength">Your entry is too long.</div>
+				          		</div>
+				        </md-autocomplete>
+ 					</div>
+ 				</div>
+    		</form>
+		</md-content>
+	</md-card-content>
+</md-card> <!-- Parent Form card ends here -->

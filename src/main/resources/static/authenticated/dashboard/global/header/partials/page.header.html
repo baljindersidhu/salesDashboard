@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<md-content>
+	<md-toolbar layout="row">
+      	<!-- Side Nav toggle button begins here-->
+        <md-button aria-label="Menu" ng-click="vm.toggle()">
+          <img alt="MENU" flex class="restrict-to-header-size" ng-src="public/src/com/global/css/images/utility-icons/top_menu1600.png"/>
+        </md-button>
+        <!-- Side Nav Toggle button ends here -->
+      	<div class="md-toolbar-tools">
+	        <!-- Logo Text for Main App -->
+			<md-truncate class="header-logo">Dashboard</md-truncate>
+        	<!-- Global Search bar begins here -->
+        	<form hide-xs flex flex-offset="5" class="global-search" ng-submit="$event.preventDefault()" name="searchForm">
+	      		<div layout="row">
+	        		<md-autocomplete flex="50"
+	         			ng-disabled="vm.isDisabled"
+	         			md-no-cache="vm.noCache"
+	         			md-selected-item="vm.selectedItem"
+	         			md-search-text-change="vm.searchTextChange(vm.searchText)"
+	         			md-search-text="vm.searchText"
+	         			md-selected-item-change="vm.selectedItemChange(item)"
+	         			md-items="item in vm.querySearch(vm.searchText)"
+	         			md-item-text="item.name"
+	         			md-min-length="0"
+	         			placeholder="Search">
+	       				<md-item-template>
+	         				<span md-highlight-text="vm.searchText" ng-click="vm.action('shipment', null, {countryCode: item.code})" md-highlight-flags="^i">{{item.name}}</span>
+	       				</md-item-template>
+	       				<md-not-found>
+	         				No users matching "{{vm.searchText}}" were found.
+	         				<!-- <a ng-click="vm.newState(vm.searchText)">Create a new one!</a> -->
+	       				</md-not-found>
+	     			</md-autocomplete>
+	     		</div>
+	    	</form>
+      	</div>
+      	<!-- Global Search bar ends here -->
+	    <form action="/logout" method="get" layout="row" no-validate>
+	    	<md-button hide-xs aria-label="Assessment">
+	    		<md-tooltip md-direction="bottom">Assessment</md-tooltip>
+	    		<span class="mdl-badge" data-badge="4">
+	    			<img alt="USER" flex class="restrict-to-header-size" ng-src="public/src/com/global/css/images/material_icons/ic_assessment_white_24dp/web/ic_assessment_white_24dp_1x.png"/>
+	    		</span>
+			</md-button>
+	    	<md-button hide-xs aria-label="Assignment">
+	    		<md-tooltip md-direction="bottom">Assignment</md-tooltip>
+	    		<span class="mdl-badge" data-badge="3">
+					<img alt="USER" flex class="restrict-to-header-size" ng-src="public/src/com/global/css/images/material_icons/ic_assignment_white_24dp/web/ic_assignment_white_24dp_1x.png"/>
+	    		</span>
+			</md-button>
+	    	<md-button aria-label="User">
+	    		<md-tooltip hide-xs md-direction="bottom">Account</md-tooltip>
+				<img alt="USER" flex class="restrict-to-header-size" ng-src="public/src/com/global/css/images/material_icons/ic_account_circle_white_24dp/ic_account_circle_white_24dp/web/ic_account_circle_white_24dp_1x.png"/>
+			</md-button>
+			<md-button type="submit" hide-xs aria-label="Logout">
+				<md-tooltip md-direction="bottom">Logout</md-tooltip>
+				<img alt="LOGOUT" flex class="restrict-to-header-size" ng-src="public/src/com/global/css/images/material_icons/ic_exit_to_app_white_24dp/web/ic_exit_to_app_white_24dp_1x.png"/>
+			</md-button>
+        </form>	
+    </md-toolbar>
+</md-content>

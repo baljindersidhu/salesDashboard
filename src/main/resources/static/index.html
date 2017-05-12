@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Dashboard</title>
+<!-- Material Design Lite Library -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+<link rel="stylesheet" href="public/src/com/global/css/material-icons.css">
+
+<!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> -->
+<link rel="stylesheet" href="public/src/com/vendor/css/material_design_lite/material.indigo-pink.min.css">
+<!-- Angular Material Library -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.css" /> -->
+<link rel="stylesheet" href="public/src/com/vendor/css/angular_material/angular-material.min.css" />
+<!-- Google Fonts -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet"> -->
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="public/src/com/global/css/styles.css"></link>
+<link rel="stylesheet" href="public/src/com/global/css/fonts.css"></link>
+<!-- Hercules Components Styles -->
+<!-- Card Logo Component -->
+<link rel="stylesheet" href="public/src/com/global/components/cardLogo/mdCardLogo.component.css"></link>
+<!-- Md-Data-Table Component -->
+<link rel="stylesheet" href="public/src/com/global/components/mdDataTable/md-data-table.css"></link>
+<!-- App Loader Component -->
+<link rel="stylesheet" href="public/src/com/global/components/appLoader/appLoader.component.css"></link>
+
+</head>
+<body ng-app="DashboardApp" layout="column" ng-cloak>
+	
+	<section layout="column" ng-controller="AuthenticationController" flex>
+		<article layout="column" flex>
+			<ui-view layout="column" flex></ui-view>
+			<!-- <ng-include layout="column" flex src="'public/src/com/base/partials/main.html'"></ng-include> -->
+		</article>
+	</section>
+	
+	<!-- Material Design Lite Library -->
+	<!-- <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
+	<script defer src="public/src/com/vendor/scripts/material/material.min.js"></script>
+	<!-- Angular JS Framework -->
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-aria.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-loader.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-messages.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.js"></script> -->
+	<script type="text/javascript" src="public/src/com/vendor/scripts/angular/angular.min.js"></script>
+	<script type="text/javascript" src="public/src/com/vendor/scripts/angular/angular-animate.min.js"></script>
+	<script type="text/javascript" src="public/src/com/vendor/scripts/angular/angular-aria.min.js"></script>
+	<script type="text/javascript" src="public/src/com/vendor/scripts/angular/angular-loader.min.js"></script>
+	<script type="text/javascript" src="public/src/com/vendor/scripts/angular/angular-messages.min.js"></script>
+	<script type="text/javascript" src="public/src/com/vendor/scripts/angular/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="public/src/com/vendor/scripts/angular_material/angular-material.min.js"></script>
+	<!-- UI-Router Library -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script> -->
+	<script src="public/src/com/vendor/scripts/ui_router/angular-ui-router.min.js"></script>
+	
+	<!-- main app module -->
+	<script type="text/javascript" src="public/src/com/base/scripts/modules/main.module.js"></script>
+	<script type="text/javascript" src="public/src/com/base/scripts/routes/base.routes.js"></script>
+	
+	<!-- app components -->
+	<script type="text/javascript" src="public/src/com/global/hercules/scripts/module.js"></script>
+	<script type="text/javascript" src="public/src/com/global/components/appLoader/appLoader.component.js"></script>
+	<script type="text/javascript" src="public/src/com/global/components/cardLogo/mdCardLogo.component.js"></script>
+	<script type="text/javascript" src="public/src/com/global/components/mdDataTable/mdDataTable.component.js"></script>
+	<script type="text/javascript" src="public/src/com/global/services/restLoader/restLoader.service.js"></script>
+	<script type="text/javascript" src="public/src/com/global/services/aarc/aarc.service.js"></script>
+	
+	<!-- authentication scripts -->
+	<script type="text/javascript" src="public/src/com/base/scripts/controllers/authentication.controller.js"></script>
+	<script type="text/javascript" src="public/src/com/base/scripts/services/authentication.service.js"></script>
+	<script type="text/javascript" src="public/src/com/landing/scripts/services/importData.service.js"></script>
+	<script type="text/javascript" src="public/src/com/landing/scripts/services/exportData.service.js"></script>
+	<!-- login page -->	
+	<script type="text/javascript" src="public/src/com/login/routes/login.routes.js"></script>
+	<script type="text/javascript" src="public/src/com/login/scripts/login.controller.js"></script>
+	<script type="text/javascript" src="public/src/com/login/scripts/login.service.js"></script>
+	<!-- register user page -->
+	<script type="text/javascript" src="public/src/com/register/scripts/routes/register.routes.js"></script>
+	<script type="text/javascript" src="public/src/com/register/scripts/controllers/register.controller.js"></script>
+	<!-- landing page -->
+	<script type="text/javascript" src="public/src/com/landing/scripts/controller/landing.controller.js"></script>
+	<script type="text/javascript" src="public/src/com/landing/scripts/services/userDetails.service.js"></script>
+	<!-- landing page side nav button service -->
+	<script type="text/javascript" src="public/src/com/landing/scripts/services/sideNav.buttons.service.js"></script>
+	<!-- landing page side nav button action service -->
+	<script type="text/javascript" src="public/src/com/landing/scripts/services/sideNav.actions.service.js"></script>
+	<!-- assignment state config -->
+	<script type="text/javascript" src="public/src/com/dashboard/states/assignments/scripts/routes.js"></script>
+	<script type="text/javascript" src="public/src/com/dashboard/states/assignments/scripts/module.js"></script>
+	<script type="text/javascript" src="public/src/com/dashboard/states/assignments/scripts/assignment.controller.js"></script>
+	<!-- shipment state config -->
+	<script type="text/javascript" src="public/src/com/dashboard/states/shipment/scripts/routes.js"></script>
+	<script type="text/javascript" src="public/src/com/dashboard/states/shipment/scripts/module.js"></script>
+	<script type="text/javascript" src="public/src/com/dashboard/states/shipment/scripts/shipment.controller.js"></script>
+	<script type="text/javascript" src="public/src/com/dashboard/states/shipment/scripts/shipmentData.controller.js"></script>
+	<script type="text/javascript" src="public/src/com/dashboard/states/shipment/scripts/shipmentData.service.js"></script>
+	<script type="text/javascript" src="public/src/com/dashboard/states/shipment/scripts/schedule.controller.js"></script>
+	<script type="text/javascript" src=""></script>
+	<script type="text/javascript" src=""></script>
+	<script type="text/javascript" src=""></script>
+	<script type="text/javascript" src=""></script>
+		
+</body>
+</html>

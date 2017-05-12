@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- Sidenav main content begins here -->
+<md-content flex class="sidenav-opacity">
+	<md-content flex layout-padding layout="column">
+	    <!-- Sidenav Logo -->
+	    <h4 class="main-logo" layout="row">
+	    	<span flex>Innovation</span>
+	    	<span>
+	    		<img alt="CLOSE"
+	    			ng-click="vm.toggle()"
+	    			ng-src="public/src/com/global/css/images/material_icons/ic_close_black_24dp/web/ic_close_black_24dp_1x.png"/>
+	    	</span>
+	    </h4> <!-- Side nav Logo ends here -->
+		
+		<!-- Side Nav actions begin here -->
+		<md-button  class="md-accent" 
+				    layout="row"
+				    ng-click="vm.action(button.name, vm.toggle)"
+				    data-background-color="green"
+				    ng-disabled="button.isActive"
+				    ng-repeat="button in vm.buttons">
+	          		<span><img alt="{{button.title}}" ng-src="{{button.src}}"/></span>
+	          		<span flex>{{button.title}}</span>
+		</md-button>
+	    <!-- <md-button ng-click="vm.toggle()" class="md-accent">
+	          Close this Sidenav
+		</md-button> -->
+    </md-content> 
+</md-content> <!-- Sidenav main content ends here -->

@@ -1,0 +1,21 @@
+/* ================================================= Google Fonts ===================================== */
+/* Raleway */
+@font-face {
+   font-family: Raleway;
+   src: url(fonts/Raleway/Raleway-Regular.ttf);
+}
+
+@font-face {
+   font-family: Macondo;
+   src: url(fonts/Macondo/Macondo-Regular.ttf);
+}
+
+@font-face {
+   font-family: Satisfy;
+   src: url(fonts/Satisfy-Regular.ttf);
+}
+
+@font-face {
+   font-family: Pacifico;
+   src: url(fonts/Pacifico/Pacifico-Regular.ttf);
+}

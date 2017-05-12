@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- including header file -->
+<md-content layout="column" flex>
+	
+	<!-- Landing page header -->
+	<ng-include flex-order="1" src="'authenticated/dashboard/global/header/partials/page.header.html'"></ng-include>
+	
+	<!-- Landing Page Content -->
+	<md-content flex flex-order="2" ng-init="vm.showLoginToast()" layout="row">
+		
+		<!-- Landing Page Sidenav Starts-->
+		<md-sidenav md-component-id="{{vm.sidenavId}}"
+                 md-disable-backdrop md-whiteframe="4" class="sidenav-background" flex="20" layout="column">
+            <!-- Landing page Side Nav -->
+      		<ng-include flex layout="column" src="'authenticated/dashboard/landing/partials/sidenav.html'"></ng-include>
+	    </md-sidenav><!-- Landing Page Sidenav ends -->
+	    <!-- Main Dashboard view -->
+	    <app-loader flex-offset="50" ng-if="stateIsLoading"></app-loader>
+	    <ui-view flex flex-offset-gt-sm="20" ng-hide="!responseReceived"></ui-view>
+	</md-content>
+</md-content>

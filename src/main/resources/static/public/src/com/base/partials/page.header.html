@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<md-content>
+	<md-toolbar layout="row">
+		<!-- Side Nav toggle button begins here-->
+        <md-button aria-label="Menu" ng-click="vm.redirect()">
+          <!-- <img alt="MENU" flex class="restrict-to-header-size" ng-src="public/src/com/global/css/images/utility-icons/top_menu1600.png"/> -->
+          <img alt="LOGO" flex class="restrict-to-header-size" ng-src="public/src/com/global/css/images/logo5.png">
+        </md-button>
+      	<div class="md-toolbar-tools">
+	        <md-truncate class="header-logo">Dashboard</md-truncate>
+    	    <span flex></span>
+			<md-button ui-sref="main.user-registration">
+				<md-tooltip hide-xs md-direction="bottom">Register User</md-tooltip>
+				Register
+			</md-button>
+        <!-- <md-button class="md-fab md-mini" aria-label="Favorite">
+          <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+        </md-button> -->
+      </div>
+    </md-toolbar>
+</md-content>

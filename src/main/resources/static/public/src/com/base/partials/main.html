@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<!-- including header file -->
+<md-content layout="column" flex>
+	<ng-include src="'public/src/com/base/partials/page.header.html'"></ng-include>
+	<!-- including main page -->
+	<!-- redirect to Login page if no view is selected as of now -->
+	<ui-view layout="column" flex> <!-- class="slide-pop" --> <!-- for slide-pop in animation on view change -->
+		<div layout="column" flex layout-align="center center" class="login-background">
+			<md-button class="md-raised md-primary" ui-sref="main.login">Login</md-button>
+		</div>
+	</ui-view>
+	<logged-in-user-info></logged-in-user-info>
+</md-content>

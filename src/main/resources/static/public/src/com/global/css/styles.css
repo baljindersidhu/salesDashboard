@@ -1,0 +1,311 @@
+/* ================================================ Header ========================================================================== */
+
+/* header logo image margin and height */
+.header-logo-image{
+	margin-left: 50px;
+}
+
+/* restrict image size to 50px only */
+.restrict-to-header-size{
+	max-height: 50px;
+}
+
+/* styling header logo */
+.header-logo{
+    color: rgb(140,158,255);
+    font-family: 'Macondo', cursive;
+}
+
+/* ============================================== Login Page =========================================================================== */
+/* for default page background */
+.login-background{
+	background-image: url("images/default4.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* for center aligning login page card */
+.login-card{
+	min-width: 50%;
+}
+
+.login-form-logo{
+	max-width: 125px;	
+}
+
+.login-form{
+	background-color: white;
+    opacity: 0.8;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    min-height: 320px;
+}
+
+
+/* giving background image to login page */
+.parentView{
+	background-image: url("images/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* giving minimum height for smaller devices 
+to prevent overlap by virtual keyboard */
+.min-height500{
+	min-height: 500px !important;
+}
+
+/* ====================================================== Body Font ============================================================= */
+/* setting font for body */
+body{
+	font-family: 'Raleway', sans-serif;
+}
+/* default user image */
+
+/* ====================================================== Global Common Styles ================================================== */
+/* giving 10% margin for left and right on login-input containers */
+.marginLft5prcnt{
+	margin-left: 5%;
+}
+.marginLft10prcnt{
+	margin-left: 10%;
+}
+.marginRgt10prcnt{
+    margin-right: 10%;
+}
+
+/* global sizing by percent */
+.size20prcnt{
+	max-height: 20%;
+}
+
+/* ======================================================== Landing Page Styles ==================================================== */
+.landing-background{
+	background-image: url("images/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.login-toast-opacity{
+	opacity: 0.9;
+}
+
+		/* ================================================== Sidenav Styles ================================= */
+.sidenav-background{
+	background-image: url("images/sidenav/sidenav10.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.sidenav-opacity{
+	opacity: 0.9;
+}
+
+.main-logo{
+	font-family: 'Satisfy', cursive;
+}
+
+/* ========================================================== Shipment Schedule Styles =====================================*/
+
+
+/* =========================================================================================================================== */
+/* .slide-pop {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.slide-pop.ng-enter,
+.slide-pop.ng-leave {
+	-webkit-transition: all 1s linear;
+	transition: all 1s linear;
+}
+.slide-pop.ng-enter {
+	opacity: 0;
+	-webkit-transform: scale(.5);
+	transform: scale(.5);
+}
+.slide-pop.ng-enter-active {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.slide-pop.ng-leave {
+	left: 0;
+	opacity: .5;
+}
+.slide-pop.ng-leave-active {
+	left: -100%;
+	opacity: 0;
+}
+
+.reverse .page.slide-pop.ng-enter {
+	opacity: .5;
+	left: -100%;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.reverse .page.slide-pop.ng-enter-active {
+	opacity: 1;
+	left: 0;
+}
+.reverse .page.slide-pop.ng-leave {
+	opacity: .5;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	left: 0;
+	right: 0;
+}
+.reverse .page.slide-pop.ng-leave-active {
+	opacity: 0;
+	-webkit-transform: scale(.5);
+	transform: scale(.5);
+} */
+
+/* =====================================================ng-show / ng-hide effects================================================== */
+/* when hiding the thing */
+.ng-hide-add         { 
+  -webkit-animation:0.5s lightSpeedOut ease; 
+  animation:0.5s lightSpeedOut ease; 
+}
+
+/* when showing the thing */
+.ng-hide-remove      { 
+  -webkit-animation:0.5s flipInX ease; 
+  animation:0.5s flipInX ease; 
+}
+/* ANIMATIONS (FROM ANIMATE.CSS) */
+
+/* flip in */
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -ms-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -ms-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    -ms-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    -ms-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    -ms-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+/* light speed out */
+@-webkit-keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+    -ms-transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+/* =================================================== Loader smooth transition styles ============================= */
+
+.showLoader{
+	display: block !important
+}
+
+.showLoader.ng-enter,
+.showLoader.ng-leave {
+	-webkit-transition: all 1s linear;
+	transition: all 1s linear;
+}
+.showLoader.ng-enter {
+	opacity: 0;
+	-webkit-transform: scale(.5);
+	transform: scale(.5);
+}
+.showLoader.ng-enter-active {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.showLoader.ng-leave {
+	left: 0;
+	opacity: .5;
+}
+.showLoader.ng-leave-active {
+	left: -100%;
+	opacity: 0;
+}
+
+/* ============================================ Rest Call Loader styles ============================================= */
+.loader-height{
+	max-height: 100px;
+}

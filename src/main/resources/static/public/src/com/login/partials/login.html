@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<section layout="column" flex ng-controller="UserLoginController as vm">
+	<article layout="column" flex class="login-background min-height500" layout-align="center center">
+		<!-- <md-card md-theme="default" md-theme-watch class="login-card">
+			Login Card Title
+			<md-card-title>
+		        <md-card-title-media class="marginLft5prcnt">
+		            <div class="md-media-md card-media">
+		            	<img ng-src="public/src/com/global/css/images/atomix_user31.png"/>
+		            </div>
+		        </md-card-title-media>
+		    	<md-card-title-text layout-align="center center">
+		            <span class="md-headline">Login</span>
+		            <span class="md-headline">Enter login credentials</span>
+		        </md-card-title-text>
+			</md-card-title>
+			Login Card Title ends here
+			
+			Login Card Main begins here
+			<md-card-content layout="column" class="marginLft10prcnt marginRgt10prcnt">
+				<md-input-container>
+					<label>Username</label>
+					<input ng-model="vm.user.username">
+				</md-input-container>
+				<md-input-container>
+					<label>Password</label>
+					<input required ng-attr-type="{{vm.showPassword?'input':'password'}}" ng-model="vm.user.password">
+				</md-input-container>
+				<md-checkbox ng-model="vm.showPassword" aria-label="Show Password">
+	            	Show Password
+	          	</md-checkbox>
+			</md-card-content>
+			Login Card main ends here
+			
+			Login Card action buttons begin here
+			<md-card-footer>
+			    <md-card-actions layout="row" layout-align="center center">
+			        <md-button>Login</md-button>
+			        <md-button ui-sref="user-registration">Register</md-button>
+			    </md-card-actions>
+			</md-card-footer>
+		    Login Card action buttons end here
+		</md-card> -->
+		<form name="loginForm" layout="column" action="/login" method="post" no-validate> <!-- action="/login" method="post" -->
+			<img ng-src="public/src/com/global/css/images/atomix_user31.png" class="login-form-logo"/>
+			<md-content layout="column" class="login-form">
+				<md-input-container>
+					<label>Username</label>
+					<input name="username" ng-model="vm.user.username" autofocus>
+				</md-input-container>
+				<md-input-container>
+					<label>Password</label>
+					<input required name="password" ng-attr-type="{{vm.showPassword?'input':'password'}}" ng-model="vm.user.password">
+				</md-input-container>
+				<md-checkbox ng-model="vm.showPassword" aria-label="Show Password">
+			        <md-tooltip md-direction="right">Check to show Password as Plain Text</md-tooltip>
+			        Show Password
+				</md-checkbox>
+				<md-button type="submit" aria-label="Login">Login</md-button>
+			</md-content>
+		</form>
+	</article>
+</section>

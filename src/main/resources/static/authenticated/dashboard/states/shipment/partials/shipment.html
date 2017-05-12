@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<md-content flex class="md-padding">
+    <div flex layout="column">
+		<md-card flex>
+			<md-card-logo logo-path="vm._logoPath"
+							logo-color="vm._logoColor">
+			</md-card-logo> <!-- Hercules Component for artistic Header Logos -->
+			<md-card-header>
+		        <md-card-header-text>
+		            <span class="md-title">Shipments</span>
+		            <span class="md-subhead">Status</span>
+				</md-card-header-text>
+			</md-card-header> <!-- Header ends here -->
+		    <!-- Country selector -->
+		    <md-card-title>
+		    	<md-card-title-text>
+		        		<span class="md-title">Country</span>
+	        			<md-select ng-model="vm.country" ng-disabled="vm.disableSelect" class="md-no-underline" placeholder="Select Country">
+						    <md-option ng-value="opt.code" ng-repeat="opt in vm.countries" ng-click="vm.action(opt.code)">{{ opt.name }}</md-option>
+						</md-select>
+		        	<span>
+		        	</span>
+		        </md-card-title-text>
+			</md-card-title> <!-- Title ends here -->
+			
+			<!-- Shipments Main View -->
+		    <md-card-content>
+		    	<md-tabs md-dynamic-height md-border-bottom md-selected="vm.selectedTab">
+			      	<!-- Schedule new shipment tab -->
+			      	<md-tab label="Schedule">
+			        	<md-content class="md-padding" layout-margin>
+			          		<!-- schedule new shipment form begins here -->
+				    		<ng-include src="vm.formProvider"></ng-include>
+			        	</md-content>
+			      	</md-tab> <!-- Schedule new shipment tab ends here -->
+			      	
+			      	<!-- In Transit shipments status -->
+			      	<md-tab label="Transit">
+			        	<md-content class="md-padding" layout-margin>
+			        		<ng-include src="vm.dataProvider"></ng-include>
+			        	</md-content>
+			      	</md-tab> <!-- In Transit shipments tab ends here -->
+			    </md-tabs>
+			</md-card-content>
+		</md-card> <!-- Parent card ends here -->
+    </div>
+</md-content>
